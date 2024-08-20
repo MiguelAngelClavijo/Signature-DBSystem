@@ -7,9 +7,17 @@ export default function Form(props: {
   name: Dispatch<SetStateAction<typeForm>>;
   valorForm: typeForm;
 }) {
-  const html = render(<MyTemplate name={props.valorForm.nombre} />, {
-    pretty: true,
-  });
+  const html = render(
+    <MyTemplate
+      name={props.valorForm.nombre}
+      cargo={props.valorForm.cargo}
+      celular={props.valorForm.celular}
+      ext={props.valorForm.ext}
+    />,
+    {
+      pretty: true,
+    }
+  );
   return (
     <form
       className="flex flex-col justify-center gap-5 px-8 lg:w-96 lg:px-0"
