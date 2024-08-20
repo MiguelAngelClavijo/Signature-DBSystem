@@ -18,6 +18,7 @@ export default function Form(props: {
       pretty: true,
     }
   );
+  console.log(html);
   return (
     <form
       className="flex flex-col justify-center gap-5 px-8 lg:w-96 lg:px-0"

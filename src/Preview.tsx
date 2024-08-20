@@ -42,10 +42,10 @@ export default function Preview(props: { valorForm: typeForm }) {
               <img src={Linkedin} alt="Icono Linkedin"></img>
             </a>
             <a
-              href="https://www.linkedin.com/company/dbsystemcol/"
+              href="https://www.db-system.com"
               target="_blank"
             >
-              <img src={Web} alt="Icono Linkedin"></img>
+              <img src={Web} alt="Icono WEB"></img>
             </a>
           </div>
           <p className="text-DBSystem text-xs">Direccion: Calle 97A N° 53-01</p>

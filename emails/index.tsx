@@ -1,5 +1,7 @@
 import { Tailwind, Img, Container, Text } from "@react-email/components";
-import imagen from "../src/assets/Img_Firma.png";
+import Imagen from "../src/assets/Img_Firma.png";
+import IconCel from "../src/assets/cel.svg";
+import IconTel from "../src/assets/telephone.svg"
 
 export default function Email(props: {
   name: string;
@@ -13,28 +15,28 @@ export default function Email(props: {
         theme: {
           extend: {
             colors: {
-              DBSystem: "#203463",
+
             },
           },
         },
       }}
     >
-      <Container className="p-4">
+      <Container className="p-1">
         <table>
           <tr>
-            <td style={{ verticalAlign: "top", paddingRight: "10px" }}>
-              <Img src={imagen} alt="Logo" width="150" />
+            <td style={{ verticalAlign: "center", paddingRight: "10px" }}>
+              <Img src={Imagen} alt="Logo" width="120" />
             </td>
-            <td style={{ verticalAlign: "top" }}>
-              <Text className="text-DBSystem text-lg font-bold">
+            <td style={{ verticalAlign: "center" }}>
+              <Text className="text-lg font-bold m-0" style={{ color: "#203463" }}>
                 {props.name}
               </Text>
-              <Text className="text-DBSystem text-sm">{props.cargo}</Text>
-              <Text className="text-DBSystem text-sm">{props.celular}</Text>
-              <Text className="text-DBSystem text-sm">
-                (601) 690 7013 Ext.{props.ext}
+              <Text className="font-semibold m-0" style={{ color: "#203463" }}>{props.cargo}</Text>
+              <Text className="m-0 flex items-center justify-start gap-2" style={{ color: "#203463" }}><img src={IconCel}></img>{props.celular}</Text>
+              <Text className="m-0 flex items-center justify-start gap-2" style={{ color: "#203463" }}>
+              <img src={IconTel}></img>(601) 690 7013 Ext.{props.ext}
               </Text>
-              <Text className="text-DBSystem text-sm mt-1">
+              <Text className="m-0" style={{ color: "#203463" }}>
                 Dirección: Calle 97A N° 53-01
               </Text>
             </td>
