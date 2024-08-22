@@ -6,7 +6,11 @@ import Telefono from "./assets/telephone.svg";
 import { typeForm } from "./types/formTypes";
 import { useState } from "react";
 
-export default function Preview(props: { valorForm: typeForm }) {
+export default function Preview(props: {
+  valorForm: typeForm;
+  checkValue: boolean;
+  checkValuePhone: boolean;
+}) {
   const [checkValue, setCheckValue] = useState<boolean>(true);
   const [checkValuePhone, setCheckValuePhone] = useState<boolean>(true);
   return (
@@ -41,10 +45,7 @@ export default function Preview(props: { valorForm: typeForm }) {
             >
               <img src={Linkedin} alt="Icono Linkedin"></img>
             </a>
-            <a
-              href="https://www.db-system.com"
-              target="_blank"
-            >
+            <a href="https://www.db-system.com" target="_blank">
               <img src={Web} alt="Icono WEB"></img>
             </a>
           </div>

@@ -33,7 +33,7 @@ export default function Form(props: {
         <label className="font-bold text-DBSystem">Nombre</label>
         <input
           type="text"
-          placeholder="Miguel Angel Clavijo"
+          placeholder="Miguel Ángel Clavijo"
           className="border rounded h-10 pl-3 focus:outline-DBSystem"
           onChange={(e) => {
             props.name({ ...props.valorForm, nombre: e.target.value });
@@ -44,7 +44,7 @@ export default function Form(props: {
         <label className="font-bold text-DBSystem">Cargo</label>
         <input
           type="text"
-          placeholder="Disenador Grafico"
+          placeholder="Diseñador Grafico"
           className="border rounded h-10 pl-3 focus:outline-DBSystem"
           onChange={(e) => {
             props.name({ ...props.valorForm, cargo: e.target.value });
