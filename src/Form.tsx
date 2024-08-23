@@ -6,6 +6,8 @@ import { render } from "@react-email/render";
 export default function Form(props: {
   name: Dispatch<SetStateAction<typeForm>>;
   valorForm: typeForm;
+  checkValue: boolean;
+  checkValuePhone: boolean;
 }) {
   const html = render(
     <MyTemplate
@@ -13,12 +15,14 @@ export default function Form(props: {
       cargo={props.valorForm.cargo}
       celular={props.valorForm.celular}
       ext={props.valorForm.ext}
+      checkValue={props.checkValue}
+      checkValuePhone={props.checkValuePhone}
     />,
     {
       pretty: true,
     }
   );
-  console.log(html);
+  console.log(props.checkValuePhone);
   return (
     <form
       className="flex flex-col justify-center gap-5 px-8 lg:w-96 lg:px-0"

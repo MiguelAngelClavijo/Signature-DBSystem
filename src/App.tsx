@@ -16,6 +16,7 @@ function App() {
 
   const [checkValue, setCheckValue] = useState<boolean>(true);
   const [checkValuePhone, setCheckValuePhone] = useState<boolean>(true);
+
   return (
     <div className="flex flex-col gap-5 py-8 lg:gap-10">
       <Header />
@@ -24,8 +25,15 @@ function App() {
           valorForm={valorForm}
           checkValue={checkValue}
           checkValuePhone={checkValuePhone}
+          setCheckValue={setCheckValue}
+          setCheckValuePhone={setCheckValuePhone}
         />
-        <Form name={setValorForm} valorForm={valorForm} />
+        <Form
+          name={setValorForm}
+          valorForm={valorForm}
+          checkValue={checkValue}
+          checkValuePhone={checkValuePhone}
+        />
       </div>
       <Footer />
     </div>

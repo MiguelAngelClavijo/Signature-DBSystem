@@ -4,15 +4,15 @@ import Web from "./assets/web.svg";
 import Celular from "./assets/cel.svg";
 import Telefono from "./assets/telephone.svg";
 import { typeForm } from "./types/formTypes";
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 export default function Preview(props: {
   valorForm: typeForm;
   checkValue: boolean;
   checkValuePhone: boolean;
+  setCheckValue: Dispatch<SetStateAction<boolean>>;
+  setCheckValuePhone: Dispatch<SetStateAction<boolean>>;
 }) {
-  const [checkValue, setCheckValue] = useState<boolean>(true);
-  const [checkValuePhone, setCheckValuePhone] = useState<boolean>(true);
   return (
     <div className="flex flex-col px-8 gap-5 lg:px-0">
       <section className="flex border border-DBSystem rounded justify-center items-center gap-3 px-0 py-2 lg:w-96">
@@ -26,7 +26,7 @@ export default function Preview(props: {
           </p>
           <div
             className={`justify-start gap-2 ${
-              checkValuePhone ? "flex" : "hidden"
+              props.checkValuePhone ? "flex" : "hidden"
             }`}
           >
             <img src={Celular} alt="Icono_Celular" className="w-4" />
@@ -35,7 +35,7 @@ export default function Preview(props: {
           <div className="flex justify-start gap-2">
             <img src={Telefono} alt="Icono_Celular" className="w-4"></img>
             <p className="text-DBSystem text-xs">
-              690 7013 {checkValue && `Ext. ${props.valorForm.ext}`}
+              690 7013 {props.checkValue && `Ext. ${props.valorForm.ext}`}
             </p>
           </div>
           <div className="flex gap-3">
@@ -58,18 +58,18 @@ export default function Preview(props: {
           type="checkbox"
           className="border border-DBSystem py-2 rounded px-2 text-DBSystem font-bold"
           onChange={(e) => {
-            setCheckValue(e.target.checked);
+            props.setCheckValue(e.target.checked);
           }}
-          checked={checkValue}
+          checked={props.checkValue}
         ></input>
         <label>Celular</label>
         <input
           type="checkbox"
           className="border border-DBSystem py-2 rounded px-2 text-DBSystem font-bold"
           onChange={(e) => {
-            setCheckValuePhone(e.target.checked);
+            props.setCheckValuePhone(e.target.checked);
           }}
-          checked={checkValuePhone}
+          checked={props.checkValuePhone}
         ></input>
       </div>
     </div>
