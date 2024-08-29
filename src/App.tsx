@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="flex flex-col gap-5 py-8 lg:gap-10">
       <Header />
-      <div className="flex flex-col gap-5 lg:flex-row-reverse lg:justify-center lg:gap-10 lg:items-center">
+      <div className="flex flex-col gap-10 lg:flex-row-reverse lg:justify-center lg:gap-10 lg:items-center">
         <Preview
           valorForm={valorForm}
           checkValue={checkValue}

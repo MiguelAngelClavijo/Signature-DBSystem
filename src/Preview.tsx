@@ -53,30 +53,29 @@ export default function Preview(props: {
         </div>
       </section>
       <div className="flex gap-5 justify-center">
-      <div className="flex items-center mb-4">
-        <label className="me-2 font-medium text-gray-700">Extension</label>
-        <input
-          type="checkbox"
-          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-          onChange={(e) => {
-            props.setCheckValue(e.target.checked);
-          }}
-          checked={props.checkValue}
-        ></input>
+        <div className="flex items-center mb-4">
+          <label className="me-2 font-medium text-gray-700">Extension</label>
+          <input
+            type="checkbox"
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            onChange={(e) => {
+              props.setCheckValue(e.target.checked);
+            }}
+            checked={props.checkValue}
+          ></input>
         </div>
         <div className="flex items-center mb-4">
-        <label className="me-2 font-medium text-gray-700">Celular</label>
-        <input
-          type="checkbox"
-          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-          onChange={(e) => {
-            props.setCheckValuePhone(e.target.checked);
-          }}
-          checked={props.checkValuePhone}
-        ></input>
+          <label className="me-2 font-medium text-gray-700">Celular</label>
+          <input
+            type="checkbox"
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            onChange={(e) => {
+              props.setCheckValuePhone(e.target.checked);
+            }}
+            checked={props.checkValuePhone}
+          ></input>
         </div>
       </div>
     </div>
   );
 }
-
