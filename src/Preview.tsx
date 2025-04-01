@@ -15,7 +15,8 @@ export default function Preview(props: {
 }) {
   return (
     <div className="flex flex-col px-8 gap-5 lg:px-0">
-      <section className="flex border border-DBSystem rounded justify-center items-center gap-3 px-0 py-2 lg:w-96">
+      <section className="flex flex-col border border-DBSystem rounded  gap-3 px-0 py-2 lg:w-96">
+        <div className="flex gap-3 flex-row justify-center items-center">
         <img src={Image} alt="Imagen_Logo" className="h-36 justify-start" />
         <div className="flex flex-col gap-2">
           <p className="text-DBSystem text-sm font-bold">
@@ -49,9 +50,13 @@ export default function Preview(props: {
               <img src={Web} alt="Icono WEB"></img>
             </a>
           </div>
-          <p className="text-DBSystem text-xs">Direccion: Calle 97A N° 53-01</p>
+          <p className="text-DBSystem text-xs">Direccion: Calle 97A N° 53 - 01</p>      
         </div>
+        </div>
+        <p className="text-DBSystem text-[9px] ml-4 mr-4 font-bold tracking-tighter">Comprometidos con el cuidado del medio ambiente. No imprimas este correo si no es necesario.</p>
+        <p className="text-DBSystem text-[9px] ml-4 mr-4 font-light tracking-tighter">DB SYSTEM SAS. TODOS LOS DERECHOS RESERVADOS. La información contenida en este mensaje es exclusiva de su autor. Está prohibida la divulgación de la información contenida en él a personas externas o diferentes al destinatario, así como reproducir total o parcialmente este documento.  La compañía no asume responsabilidad sobre opiniones, criterios e información contenida en él. En caso de recibir este mensaje por error, le solicitamos reenviarlo a la dirección de correo de origen y borrarlo de sus archivos electrónicos o destruirlo.</p>        
       </section>
+    
       <div className="flex gap-5 justify-center">
         <div className="flex items-center mb-4">
           <label className="me-2 font-medium text-gray-700">Extension</label>
@@ -74,6 +79,7 @@ export default function Preview(props: {
             }}
             checked={props.checkValuePhone}
           ></input>
+          
         </div>
       </div>
     </div>

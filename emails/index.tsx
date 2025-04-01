@@ -31,8 +31,8 @@ export default function Email(props: {
         },
       }}
     >
-      <Container className="p-1 align-baseline">
-        <table>
+      <Container className="p-1 align-baseline" style={{ margin: "0",maxWidth: "100%", textAlign: 'left'}} >
+        <table style={{ borderCollapse: "collapse", width: "auto" }}>
           <tr>
             <td style={{ verticalAlign: "center", paddingRight: "10px" }}>
               <Img src={Imagen} alt="Logo" width="120" />
@@ -84,10 +84,18 @@ export default function Email(props: {
                   </Column>
                 </Row>
               <Text className="m-0" style={{ color: "#203463" }}>
-                Dirección: Calle 97A N° 53-01
-              </Text>
+                Dirección: Calle 97A N° 53 - 01
+              </Text >
             </td>
           </tr>
+        </table>
+        <table>
+          <Text className="m-0" style={{color: "#203463", fontSize: "11px", fontWeight: "bold", lineHeight: "1.4", marginTop: "20px",}}>
+          Comprometidos con el cuidado del medio ambiente. No imprimas este correo si no es necesario.
+          </Text>
+        <Text className="m-0" style={{color: "#203463", fontSize: "11px", fontWeight: "normal", lineHeight: "1.4", marginTop: "4px",}}>
+        DB SYSTEM SAS. TODOS LOS DERECHOS RESERVADOS. La información contenida en este mensaje es exclusiva de su autor. Está prohibida la divulgación de la información contenida en él a personas externas o diferentes al destinatario, así como reproducir total o parcialmente este documento.  La compañía no asume responsabilidad sobre opiniones, criterios e información contenida en él. En caso de recibir este mensaje por error, le solicitamos reenviarlo a la dirección de correo de origen y borrarlo de sus archivos electrónicos o destruirlo.
+        </Text>
         </table>
       </Container>
     </Tailwind>

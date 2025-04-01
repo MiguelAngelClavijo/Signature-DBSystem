@@ -48,7 +48,7 @@ export default function Form(props: {
         <label className="font-bold text-DBSystem">Cargo</label>
         <input
           type="text"
-          placeholder="Diseñador Grafico"
+          placeholder="Diseñador Gráfico"
           className="border rounded h-10 pl-3 focus:outline-DBSystem"
           onChange={(e) => {
             props.name({ ...props.valorForm, cargo: e.target.value });
@@ -59,7 +59,7 @@ export default function Form(props: {
         <label className="font-bold text-DBSystem">Celular Corporativo</label>
         <input
           type="number"
-          placeholder="305 267 0670"
+          placeholder="3052670670"
           className="border rounded h-10 pl-3 focus:outline-DBSystem appearance-none"
           onChange={(e) => {
             const numValue = e.target.value ? parseInt(e.target.value) : null;

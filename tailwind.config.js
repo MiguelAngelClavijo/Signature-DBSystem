@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         DBSystem: "#203463",
+        DBSystem2: "#00A398",
       },
     },
   },
