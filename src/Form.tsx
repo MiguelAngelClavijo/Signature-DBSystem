@@ -68,7 +68,7 @@ export default function Form(props: {
         />
       </div>
       <div className="flex flex-col gap-2">
-        <label className="font-bold text-DBSystem">Extension</label>
+        <label className="font-bold text-DBSystem">Extensión</label>
         <input
           type="number"
           placeholder="126"

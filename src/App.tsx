@@ -7,8 +7,8 @@ import { typeForm } from "./types/formTypes";
 
 function App() {
   const [valorForm, setValorForm] = useState<typeForm>({
-    nombre: "Miguel Angel Clavijo",
-    cargo: "Diseñador Grafico",
+    nombre: "Miguel Ángel Clavijo",
+    cargo: "Diseñador Gráfico",
     celular: 3052670670,
     telefono: 0,
     ext: 126,
