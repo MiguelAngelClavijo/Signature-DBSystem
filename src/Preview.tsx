@@ -1,4 +1,3 @@
-import Image from "./assets/Img_Firma.png";
 import Linkedin from "./assets/linkedin.svg";
 import Web from "./assets/web.svg";
 import Celular from "./assets/cel.svg";
